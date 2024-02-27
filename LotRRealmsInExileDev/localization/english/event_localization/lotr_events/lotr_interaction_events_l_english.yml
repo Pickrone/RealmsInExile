@@ -1,0 +1,5 @@
+﻿l_english:
+  lotr_interaction_events.0001.opening:0 "[recipient.Custom2('AppropriateGreetingPositive', actor)]"
+  lotr_interaction_events.0001.desc:0 "I am honored by your request, and I would be glad to come to your aid in your time of need."
+  lotr_interaction_events.0001.tooltip:0 "[recipient.GetTitledFirstNameNoTooltip] entered into a defensive alliance with you"
+  lotr_interaction_events.0001.a:0 "Marvelous news!"

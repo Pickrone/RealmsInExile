@@ -49,3 +49,8 @@
  action_can_join_wars_label:2 "You can join [recipient.GetShortUINameNoTooltip]'s wars"
  action_can_join_wars_combined_label:0 "[recipient.GetUINameNoTooltip]"
  action_can_join_wars_click:0 "#I Click to join war#!"
+
+
+ # Defensive Alliance
+
+  defensive_ally_tooltip:0 "#size:20 Defensively [allied|E] to #V [Scope.GetCharacter.GetTitledFirstName]#!#!\nNegotiated"

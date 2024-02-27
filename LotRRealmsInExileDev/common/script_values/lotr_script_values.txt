@@ -622,27 +622,35 @@ tributary_gold_being_recieved = {
 	if = {
 		limit = {
 			exists = root
+			has_variable_list = non_permanent_tributaries
 			any_in_list = {
 				variable = non_permanent_tributaries
-				exists = this
+				count > 0
 			}
 		} 
 		every_in_list = {
 			variable = non_permanent_tributaries
-			add = var:tribute_gold_amount
+			if = {
+				limit = { has_variable = tribute_gold_amount }
+				add = var:tribute_gold_amount
+			}
 		}
 	}
 	if = {
 		limit = {
 			exists = root
+			has_variable_list = permanent_tributaries
 			any_in_list = {
 				variable = permanent_tributaries
-				exists = this
+				count > 0
 			}
 		}
 		every_in_list = {
 			variable = permanent_tributaries
-			add = var:tribute_gold_amount
+			if = {
+				limit = { has_variable = tribute_gold_amount }
+				add = var:tribute_gold_amount
+			}
 		}
 	}
 }
@@ -653,5 +661,21 @@ tributary_gold_being_paid = {
 	if = {
 		limit = { is_tributary = yes } 
 		add = var:tribute_gold_amount
+	}
+}
+
+#############################
+### LotR Diplomacy Values ###
+#############################
+
+defensive_alliances = {
+	value = 0
+
+	if = {
+		limit = { has_defensive_alliance = yes }
+		every_in_list = {
+			variable = defensive_allies
+			add = 1
+		}
 	}
 }
