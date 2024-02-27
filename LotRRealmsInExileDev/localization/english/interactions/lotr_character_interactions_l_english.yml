@@ -37,3 +37,6 @@
 
   establish_defensive_alliance_interaction:0 "Negotiate Defensive Alliance"
   establish_defensive_alliance_interaction_desc:0 "Use existing relations with [recipient.GetName] to negotiate a defensive alliance with them."
+
+  call_defensive_ally_interaction:0 "Call into [war|E]"
+  call_defensive_ally_interaction_desc:0 "Use existing relations with [recipient.GetName] to call them into a war."

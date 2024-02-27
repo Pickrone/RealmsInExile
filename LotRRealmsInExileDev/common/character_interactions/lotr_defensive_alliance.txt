@@ -766,7 +766,7 @@ establish_defensive_alliance_interaction = {
 
 call_defensive_ally_interaction = {
 	category = interaction_category_diplomacy
-	desc = call_ally_interaction_desc
+	desc = call_defensive_ally_interaction_desc
 	interface_priority = 60
 	interface = call_ally
 	special_interaction = call_ally_interaction
