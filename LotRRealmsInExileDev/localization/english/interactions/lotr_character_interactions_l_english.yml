@@ -36,7 +36,10 @@
   buy_resource_interaction_accept_tt:0 "You start a trading interaction with [recipient.GetName]"
 
   establish_defensive_alliance_interaction:0 "Negotiate Defensive Alliance"
-  establish_defensive_alliance_interaction_desc:0 "Use existing relations with [recipient.GetName] to negotiate a defensive alliance with them."
+  establish_defensive_alliance_interaction_desc:0 "Use existing relations with [recipient.GetName] to negotiate a [defensive_alliance|E] with them."
+  negotiate_defensive_alliance_effect_recipient_tooltip:0 "Enters a mutual [defensive_alliance|E] with [actor.GetTitledFirstName]"
 
   call_defensive_ally_interaction:0 "Call into [war|E]"
   call_defensive_ally_interaction_desc:0 "Use existing relations with [recipient.GetName] to call them into a war."
+
+  defensive_alliance_is_valid_failure:0 "You already have a [defensive_alliance|E] with [recipient.GetTitledFirstName]"

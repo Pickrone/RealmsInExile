@@ -17,14 +17,15 @@ establish_defensive_alliance_interaction = {
 	answer_reject_key = SEND_GIFT_REJECT
 
 	is_shown = {
+		scope:actor = { has_perk = defensive_negotiations_perk }
 		NOT = { scope:recipient = scope:actor }
+		NOT = { scope:actor = { has_variable_list = defensive_allies } }
 		scope:actor = {			
 			NOT = { has_culture = culture:wastelands }
 			is_in_valinor = no
 		}
 		scope:recipient = {
 			NOT = { this = scope:actor }
-			NOT = { is_defensive_allied_to = { RECIPIENT = scope:actor } }
 			is_ruler = yes
 			is_in_valinor = no			
 		}
@@ -84,7 +85,7 @@ establish_defensive_alliance_interaction = {
 		}
 
 		scope:recipient = {
-			custom_tooltip = negotiate_alliance_effect_recipient_tooltip
+			custom_tooltip = negotiate_defensive_alliance_effect_recipient_tooltip
 		}
 
 		scope:recipient = {
@@ -997,7 +998,7 @@ call_defensive_ally_interaction = {
 					set_relation_potential_friend = scope:recipient
 				}
 			}
-			trigger_event = call_ally.0100
+			trigger_event = { on_action = call_defensive_ally_accept_event_pool }
 		}
 		scope:target = {
 			if = {
@@ -1071,7 +1072,7 @@ call_defensive_ally_interaction = {
 				}
 			}
 			scope:actor = {
-				trigger_event = call_ally.0101
+				trigger_event = { on_action = call_defensive_ally_decline_event_pool }
 			}
 			
 			# If we're a clan this interaction affects unity

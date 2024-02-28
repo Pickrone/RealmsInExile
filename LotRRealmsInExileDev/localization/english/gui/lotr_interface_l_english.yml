@@ -53,4 +53,5 @@
 
  # Defensive Alliance
 
-  defensive_ally_tooltip:0 "#size:20 Defensively [allied|E] to #V [Scope.GetCharacter.GetTitledFirstName]#!#!\nNegotiated"
+  defensive_ally_tooltip:0 "#size:20 [Concept('defensive_alliance','Defensively')|E] [allied|E] to #V [Scope.GetCharacter.GetTitledFirstName]#!#!\nNegotiated\n#I Click to view#!"
+  defensively_allied_to_target_tooltip:0 "You are [Concept('defensive_alliance','defensively')|E] [allied|E] to #V [recipient.GetTitledFirstName]"

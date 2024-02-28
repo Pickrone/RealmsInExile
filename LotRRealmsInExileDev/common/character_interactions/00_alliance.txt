@@ -881,6 +881,7 @@ negotiate_alliance_interaction = {
 		scope:recipient = {
 			NOT = { this = scope:actor }
 			NOT = { is_allied_to = scope:actor }
+			NOT = { is_defensive_allied_to = { RECIPIENT = scope:actor } }
 			is_ruler = yes
 			is_in_valinor = no			
 		}
@@ -2055,14 +2056,17 @@ perk_alliance_interaction = {
 				}
 			}
 		}
-		
+		custom_tooltip = {
+			text = defensive_alliance_is_valid_failure
+			NOT = { scope:actor = { is_defensive_allied_to = { RECIPIENT = scope:recipient } } }
+		}
 		scope:recipient = {
 			is_landed = yes
 			is_at_war = no
 			is_imprisoned = no
 			NOT = { has_culture = culture:wastelands }
 			is_sauron = no
-			or = {
+			OR = {
 				is_nazgul = no
 				has_character_flag = khamul
 			}
@@ -2074,7 +2078,7 @@ perk_alliance_interaction = {
 			is_imprisoned = no
 			NOT = { has_culture = culture:wastelands }
 			is_sauron = no
-			or = {
+			OR = {
 				is_nazgul = no
 				has_character_flag = khamul
 			}
@@ -2083,7 +2087,7 @@ perk_alliance_interaction = {
 		#Khamul can only enter alliances as a player, with a player
 		trigger_if = {
 			limit = { 
-				or = {
+				OR = {
 					scope:actor = { has_character_flag = khamul }
 					scope:recipient = { has_character_flag = khamul }
 				}

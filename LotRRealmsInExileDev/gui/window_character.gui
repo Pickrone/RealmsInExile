@@ -1831,8 +1831,7 @@ window = {
 								layoutpolicy_vertical = expanding
 							}
 
-							vbox_diplomacy_box = { # 
-								# visible = "[And(Not(IsDataModelEmpty(CharacterWindow.GetDiplomacyItems)), LessThanOrEqualTo_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems), '(int32)4'))]"
+							vbox_diplomacy_box = {
 								visible = "[And(Not(IsDataModelEmpty(CharacterWindow.GetDiplomacyItems)), LessThanOrEqualTo_int32(Add_int32(FixedPointToInt(CharacterWindow.GetCharacter.MakeScope.ScriptValue('defensive_alliances')),GetDataModelSize(CharacterWindow.GetDiplomacyItems)), '(int32)4'))]"
 								layoutpolicy_vertical = expanding
 
@@ -1843,6 +1842,11 @@ window = {
 									maxverticalslots = 2
 									maxhorizontalslots = 2
 									datamodel_wrap = 2
+								} 
+								blockoverride "LOTR_defensive_ally_margins"
+								{ 
+									margin_top = "[Multiply_int32('(int32)-64',Select_int32(LessThanOrEqualTo_int32( GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)1' ),'(int32)1', Select_int32(EqualTo_int32( GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)3' ),'(int32)1','(int32)0') ))]"
+									margin_right = "[Multiply_int32('(int32)-50',Select_int32(LessThanOrEqualTo_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)2'),'(int32)-1','(int32)1'))]"
 								}
 							}
 
@@ -1858,6 +1862,11 @@ window = {
 									maxhorizontalslots = 3
 									datamodel_wrap = 3
 								}
+								blockoverride "LOTR_defensive_ally_margins"
+								{ 
+									margin_top = "[Multiply_int32('(int32)-64',Select_int32(GreaterThanOrEqualTo_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)3'),'(int32)1','(int32)3'))]"
+									margin_right = "[Multiply_int32('(int32)100',Select_int32(LessThan_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)5'),'(int32)0','(int32)-1'))]"
+								}
 							}
 
 							vbox_diplomacy_box = {
@@ -1871,6 +1880,11 @@ window = {
 									maxverticalslots = 2
 									maxhorizontalslots = 4
 									datamodel_wrap = 4
+								}
+								blockoverride "LOTR_defensive_ally_margins"
+								{ 
+									margin_top = "[Multiply_int32('(int32)-64',Select_int32(GreaterThanOrEqualTo_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)4'),'(int32)1','(int32)3'))]"
+									margin_right = "[Multiply_int32('(int32)-50',Select_int32(LessThan_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)7'),'(int32)1','(int32)3'))]"
 								}
 							}
 
@@ -1891,6 +1905,11 @@ window = {
 									maxverticalslots = 2
 									maxhorizontalslots = 5
 									datamodel_wrap = 5
+								}
+								blockoverride "LOTR_defensive_ally_margins"
+								{
+									margin_top = "[Multiply_int32('(int32)-64',Select_int32(GreaterThanOrEqualTo_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)5'),'(int32)1','(int32)3'))]"
+									margin_right = "[Multiply_int32('(int32)-100',Select_int32(LessThan_int32(GetDataModelSize(CharacterWindow.GetDiplomacyItems),'(int32)9'),'(int32)1','(int32)2'))]"
 								}
 							}
 
@@ -4652,7 +4671,12 @@ types CharacterWindow
 				}
 			}
 			vbox = {
-				min_width = 100
+				visible = "[Not(GreaterThanOrEqualTo_int32( Add_int32(FixedPointToInt(CharacterWindow.GetCharacter.MakeScope.ScriptValue('defensive_alliances')),GetDataModelSize(CharacterWindow.GetDiplomacyItems)), '(int32)11' ))]"
+				block "LOTR_defensive_ally_margins" 
+				{
+					margin_top = -64
+					margin_right = -50
+				}
 				allow_outside = yes
 				fixedgridbox = {
 					name = "LOTR_defensive_allies"
@@ -4661,22 +4685,22 @@ types CharacterWindow
 					addrow = 65
 					addcolumn = 50
 					allow_outside = yes
+					# margin_bottom = 10
 
 					block "LOTR_defensive_allies_slots"
 					{
-						maxverticalslots = 2
-						maxhorizontalslots = 3
-						datamodel_wrap = 3
+						maxverticalslots = 1
+						maxhorizontalslots = 1
+						datamodel_wrap = 1
 					}
 
 					item = {
 						container = {
 							allow_outside = yes
 							datacontext = "[Scope.GetCharacter]"
-
 							button = {
 								parentanchor = hcenter
-								position = { 0 -75 }
+								position = { 0 -11 }
 								texture = "gfx/interface/icons/casus_bellis/_default.dds"
 								framesize = { 120 120 }
 								size = { 40 40 }
@@ -4685,7 +4709,7 @@ types CharacterWindow
 							}
 
 							coa_realm_small = {
-								position = { 0 -64 }
+								# position = { 0 -64 }
 								tooltip = "defensive_ally_tooltip"
 								using = tooltip_es
 								tooltip_offset = { 0 22 }
@@ -4725,8 +4749,8 @@ types CharacterWindow
 				}
 			}
 
-		expand = {}
-	}
+			expand = {}
+		}
 
 	type widget_struggle_icon = widget {
 		size = { 100% 100% }

@@ -1563,6 +1563,8 @@ oiolare = {
 	alias = { oiolare_tree oiolare_trees }
 }
 
+defensive_alliance = { }
+
 ###########################
 #### Artifact Crafting ####
 ###########################
