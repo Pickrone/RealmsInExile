@@ -38,6 +38,17 @@ lotr_race_outbreak_chance_epidemics_mult_value = {
 	}
 }
 
+lotr_race_dwarf_outbreak_chance_epidemics_mult_value = {
+	value = 0
+	# outbreaks chance for dwarves
+	if = {		
+		limit = {
+			county.culture = { is_dwarf_culture = yes }
+		}
+		add = 1
+	}
+}
+
 #### SPREAD CHANCE ###
 #Controls the spread of the epidemic
 #root = potential_province
@@ -76,3 +87,44 @@ lotr_race_spread_chance_epidemics_mult_value = {
 		multiply = 0.7
 	}		
 }	
+
+lotr_race_dwarf_spread_chance_epidemics_mult_value = {
+	value = 1
+	# spread chance for non dwarven cultures
+	if = {
+		limit = {
+			AND = {
+				county.culture = { is_dwarf_culture = no }
+				NOT = { county.holder = character:k_wastelands_holder }
+			}	
+		}
+		multiply = 0
+	}
+	# spread chance for wastelands (wasteland holdings)
+	if = {
+		limit = {
+			has_holding_type = wastelands_holding
+		}
+		multiply = 0
+	}	
+	# spread chance for wastelands (baronies holded by wastelands holder)
+	else_if = {
+		limit = {
+			county.holder = character:k_wastelands_holder
+		}
+		multiply = 0.5
+	}		
+}	
+
+#### CHARACTER INFECTION CHANCE ###
+#Monthly chance for an epidemic to infect a character in the province
+
+lotr_character_dwarf_infection_chance_mult_value = {
+	value = 1
+	if = {
+		limit = {
+			is_dwarf = no
+		}
+		multiply = 0
+	}
+}
