@@ -111,6 +111,11 @@
  health.1011.court_physician.desc:0 "\n\n"My [ROOT.Char.GetLadyLord], I will do everything in my power, but it might be wise to prepare for the worst...""
  health.1011.a:1 "Oh, [ROOT.Char.GetFaith.HealthGodName]! Save me from this nightmare!"
  
+ health.1098.t:1 "[SCOPE.Custom('EventTitleDisease')]: The Lost Pride"
+ health.1098.desc:0 "Fear of losing my beard has been a constant companion throughout my life. My childhood nurse told me haunting bedtime stories of itching chin and falling hair.\n\nBut the beard plague is no longer just a scary story. Gingerly, I touch residual remains of once glorious beard. A dark and devastating force is tainting my beard, consuming it as I still breathe."
+ health.1098.court_physician.desc:0 "\n\n"My [ROOT.Char.GetLadyLord], I will do everything in my power, but it might be wise to prepare for the worst...""
+ health.1098.a:1 "Oh, [ROOT.Char.GetFaith.HealthGodName]! Save me from this nightmare!"
+
  health.1099.t:1 "[SCOPE.Custom('EventTitleDisease')]: The Black Breath"
  health.1099.desc:0 "Since I have been in contact with this Dark Rider, I haven't felt the same. Everything around me feels like inside a nightmare:\n\nthe colours aren't as bright as they once were, the sun on my skin gives no warmth and I feel all my energy draining out of me. All I want to do anymore is sleep.\n\nI fear I have been touched by the terrible Black Breath, of which no cure is known."
  health.1099.court_physician.desc:0 "\n\n"My [ROOT.Char.GetLadyLord], I will do everything in my power, but it might be wise to prepare for the worst...""

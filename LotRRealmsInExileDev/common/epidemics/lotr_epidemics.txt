@@ -2,8 +2,8 @@
 
 
 # dwarven prototype
-dwarven_pox = {
-	trait = smallpox
+beardless_plague = {
+	trait = beardless_plague
 	color = { 10 80 10 }
 	priority = 3
 
@@ -20,7 +20,6 @@ dwarven_pox = {
 			random_valid = {
 				desc = epidemic_rulers_pox
 				desc = epidemic_titled_rulers_pox
-				desc = epidemic_animal_pox # Monkeypox, chickenpox and the like
 				desc = epidemic_realm_pox
 				desc = epidemic_holder_pox
 				desc = epidemic_culture_pox
@@ -32,15 +31,15 @@ dwarven_pox = {
 	
 	on_start = { #TODO_CE1 remove debug
 		if = {
-			limit = { NOT = { has_global_variable = smallpox_happened } }
+			limit = { NOT = { has_global_variable = beardless_plague_happened } }
 			set_global_variable = {
-				name = smallpox_happened
+				name = beardless_plague_happened
 				value = 1
 			}
 		}
 		else = {
 			change_global_variable = {
-				name = smallpox_happened
+				name = beardless_plague_happened
 				add = 1
 			}
 		}
@@ -60,12 +59,12 @@ dwarven_pox = {
 	}
 
 	can_infect_character = {
-		can_contract_disease_trigger = { DISEASE = smallpox }
+		can_contract_disease_trigger = { DISEASE = beardless_plague }
 		immune_to_epidemic = { EPIDEMIC = scope:epidemic }
 	}
 
 	on_character_infected = {
-		contract_disease_notify_effect = { DISEASE = smallpox }
+		contract_disease_notify_effect = { DISEASE = beardless_plague }
 		if = {
 			limit = {
 				is_commanding_army = yes

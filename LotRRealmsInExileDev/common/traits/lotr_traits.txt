@@ -1359,6 +1359,39 @@ black_breath = {
 	ai_energy = -75
 }
 
+beardless_plague = {
+	icon = beardless.dds # work in progress
+
+	category = health
+	
+	#inheritance_blocker = dynasty
+	#inheritance_blocker = all
+
+	dread_baseline_add = -25
+	dread_loss_mult = 1
+	
+	dwarven_religion_opinion = -50
+	
+	flag = illness
+	flag = can_not_marry
+	flag = debilitating_illness
+	flag = blocks_getting_non_epidemic_disease
+
+	shown_in_ruler_designer = no
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_beardless_desc				# work in progress
+			}
+			desc = trait_beardless_character_desc		# work in progress
+		}
+	}
+}
+
 lifestyle_artifact_crafting = { # !!! VERY WIP !!!
 	icon = lifestyle_artifact_crafting.dds
 	category = lifestyle
