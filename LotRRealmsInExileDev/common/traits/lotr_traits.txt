@@ -1389,9 +1389,9 @@ beardless_plague = {
 				trigger = {
 					NOT = { exists = this }
 				}
-				desc = trait_beardless_desc				# work in progress
+				desc = trait_beardless_plague_desc			# work in progress
 			}
-			desc = trait_beardless_character_desc		# work in progress
+			desc = trait_beardless_plague_character_desc		# work in progress
 		}
 	}
 }

@@ -20,8 +20,8 @@
 
 #Lotr Health traits
  trait_beardless_plague: "Beardrot" 
- trait_beardless_plague_desc:0 "This character lost beard and hair because illness." 
- trait_beardless_plague_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] lost beard and hair because illness." 
+ trait_beardless_plague_desc:0 "This character lost beard and hair because of illness." 
+ trait_beardless_plague_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] lost beard and hair because of illness." 
 
  
 
