@@ -4,7 +4,7 @@
 # dwarven prototype
 beardless_plague = {
 	trait = beardless_plague
-	color = { 10 80 10 }
+	color = { 130 90 50 }
 	priority = 3
 
 	shader_data = {
