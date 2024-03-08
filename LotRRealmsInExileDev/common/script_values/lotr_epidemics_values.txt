@@ -27,7 +27,7 @@ lotr_race_outbreak_chance_epidemics_mult_value = {
 		limit = {
 			county.culture = { is_dwarf_culture = yes }
 		}
-		multiply = 1
+		multiply = 0.5
 	}
 	# outbreaks chance for orcs and goblins	
 	else_if = {		
@@ -70,7 +70,7 @@ lotr_race_spread_chance_epidemics_mult_value = {
 		limit = {
 			county.culture = { is_dwarf_culture = yes }
 		}
-		multiply = 1
+		multiply = 0.5
 	}
 	# spread chance for orcs and goblins	
 	else_if = {

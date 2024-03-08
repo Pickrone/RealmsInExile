@@ -1360,7 +1360,7 @@ black_breath = {
 }
 
 beardless_plague = {
-	icon = beardless.dds # work in progress
+	icon = beardless_plague.dds # work in progress
 
 	category = health
 	
@@ -1371,11 +1371,15 @@ beardless_plague = {
 	dread_loss_mult = 1
 	
 	dwarven_religion_opinion = -50
+
+	inheritance_blocker = dynasty
+	inheritance_blocker = all
 	
 	flag = illness
 	flag = can_not_marry
 	flag = debilitating_illness
 	flag = blocks_getting_non_epidemic_disease
+
 
 	shown_in_ruler_designer = no
 	

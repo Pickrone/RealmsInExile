@@ -18,14 +18,14 @@ beardless_plague = {
 	name = {
 		first_valid = {
 			random_valid = {
-				desc = epidemic_rulers_pox
-				desc = epidemic_titled_rulers_pox
-				desc = epidemic_realm_pox
-				desc = epidemic_holder_pox
-				desc = epidemic_culture_pox
-				desc = epidemic_location_pox
+				desc = epidemic_rulers_beardless_plague
+				desc = epidemic_titled_rulers__beardless_plague
+				desc = epidemic_realm_beardless_plague
+				desc = epidemic_holder_beardless_plague
+				desc = epidemic_culture_beardless_plague
+				desc = epidemic_location_beardless_plague
 			}
-			desc = trait_smallpox
+			desc = trait_beardless_plague
 		}
 	}
 	

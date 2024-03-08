@@ -4333,7 +4333,6 @@ health.1098 = {
 	###NO COURT PHYSICIAN OPTIONS###
 	#Find physician
 	option = {
-		shave_recipient_effect = yes
 		trigger = {
 			NOT = { exists = scope:physician }
 			is_landed = yes
@@ -4375,7 +4374,6 @@ health.1098 = {
 
 	#OK
 	option = {
-		shave_recipient_effect = yes
 		trigger = {
 			exists = scope:physician
 			liege_picks_treatment_trigger = yes
@@ -4389,7 +4387,6 @@ health.1098 = {
 	}
 	### TRAVEL- GO HOME
 	option = {
-		shave_recipient_effect = yes
 		name = health.travel.option.home
 		flavor = health.travel.option.home.flavor 
 		trigger = {
@@ -4411,7 +4408,6 @@ health.1098 = {
 	###COURT PHYSICIAN OPTIONS###
 	#Safe treatment
 	option = {
-		shave_recipient_effect = yes
 		trigger = {
 			exists = scope:physician
 			liege_picks_treatment_trigger = no
@@ -4424,7 +4420,6 @@ health.1098 = {
 
 	#Risky treatment
 	option = {
-		shave_recipient_effect = yes
 		trigger = {
 			exists = scope:physician
 			liege_picks_treatment_trigger = no
@@ -4437,7 +4432,6 @@ health.1098 = {
 	
 	#Mystic treatment
 	option = {
-		shave_recipient_effect = yes
 		trigger = {
 			court_physician_available_trigger = yes
 			liege_picks_treatment_trigger = no
@@ -4456,7 +4450,6 @@ health.1098 = {
 
 	#No treatment
 	option = {
-		shave_recipient_effect = yes
 		name = {
 			text = {
 				first_valid = {
@@ -4481,7 +4474,6 @@ health.1098 = {
 
 	#You're going to rot away in prison most likely
 	option = {
-		shave_recipient_effect = yes
 		trigger = {
 			is_imprisoned = yes 
 		}
@@ -5132,8 +5124,8 @@ health.1115 = {
 #Recover from beardless plague
 health.1116 = {
 	type = character_event
-	title = health.1112.t
-	desc = health.1112.desc
+	title = health.1116.t
+	desc = health.1116.desc
 	theme = recovery
 	left_portrait = {
 		character = root
@@ -5153,8 +5145,7 @@ health.1116 = {
 	}
 
 	option = {
-		name = health.1112.a
-		custom_tooltip = health.1112.a.tt
+		name = health.1116.a
 		show_as_tooltip = { #show the trait actually shows up in the tooltip
 			remove_trait_force_tooltip = beardless_plague
 		}
