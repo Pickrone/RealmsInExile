@@ -4301,6 +4301,7 @@ health.1098 = {
 	trigger = {
 		can_contract_disease_trigger = { DISEASE = beardless_plague }
 		is_dwarf = yes
+		NOT = { has_trait = dwarf_father }
 	}
 
 	weight_multiplier = {
