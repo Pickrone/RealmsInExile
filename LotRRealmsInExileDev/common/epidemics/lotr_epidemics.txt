@@ -55,7 +55,8 @@ beardless_plague = {
 	}
 
 	character_infection_chance = {
-		value = lotr_character_dwarf_infection_chance_mult_value
+		value = character_infection_chance_default_value
+		multiply = lotr_character_dwarf_infection_chance_mult_value
 	}
 
 	can_infect_character = {
@@ -106,6 +107,7 @@ beardless_plague = {
 				multiply = outbreak_chance_minor_mult_value
 				multiply = recent_epidemics_outbreak_mult_value
 				multiply = lotr_race_dwarf_outbreak_chance_epidemics_mult_value  # lotr_epidemics_values.txt	specific for dwarves
+				multiply = 5 # balancing constant
 				
 				### NO DLC - We increase the chance to make up for the locked diseases ###
 				if = {
@@ -141,6 +143,7 @@ beardless_plague = {
 				multiply = outbreak_chance_major_mult_value
 				multiply = recent_epidemics_outbreak_mult_value
 				multiply = lotr_race_dwarf_outbreak_chance_epidemics_mult_value  # lotr_epidemics_values.txt	specific for dwarves
+				multiply = 5 # balancing constant
 				
 				### NO DLC - We increase the chance to make up for the locked diseases ###
 				if = {
@@ -176,6 +179,7 @@ beardless_plague = {
 				multiply = outbreak_chance_apocalyptic_mult_value
 				multiply = recent_epidemics_outbreak_mult_value
 				multiply = lotr_race_dwarf_outbreak_chance_epidemics_mult_value  # lotr_epidemics_values.txt	specific for dwarves
+				multiply = 5 # balancing constant
 				
 				### NO DLC - We increase the chance to make up for the locked diseases ###
 				if = {
