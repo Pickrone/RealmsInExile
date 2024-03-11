@@ -93,18 +93,29 @@ lotr_race_dwarf_spread_chance_epidemics_mult_value = {
 	# spread chance for wastelands (baronies holded by wastelands holder)
 	if = {
 		limit = {
-			county.holder = character:k_wastelands_holder	
+			AND = {
+				county.culture = { is_dwarf_culture = no }
+				NOT = { county.holder = character:k_wastelands_holder }
+			}	
 		}
-		multiply = 0.1
+		multiply = 0
 	}
 	# spread chance for wastelands (wasteland holdings)
 	else_if = {
 		limit = {
 			has_holding_type = wastelands_holding
 		}
-		multiply = 0.01
-	}		
-}	
+		multiply = 0.05
+	}
+	
+	# spread chance for wastelands (baronies holded by wastelands holder)
+	else_if = {
+		limit = {
+			county.holder = character:k_wastelands_holder
+		}
+		multiply = 0.2		
+	}	
+}
 
 #### CHARACTER INFECTION CHANCE ###
 #Monthly chance for an epidemic to infect a character in the province
