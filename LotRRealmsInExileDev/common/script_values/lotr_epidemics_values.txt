@@ -90,15 +90,12 @@ lotr_race_spread_chance_epidemics_mult_value = {
 
 lotr_race_dwarf_spread_chance_epidemics_mult_value = {
 	value = 1
-	# spread chance for non dwarven cultures
+	# spread chance for wastelands (baronies holded by wastelands holder)
 	if = {
 		limit = {
-			AND = {
-				county.culture = { is_dwarf_culture = no }
-				NOT = { county.holder = character:k_wastelands_holder }
-			}	
+			county.holder = character:k_wastelands_holder	
 		}
-		multiply = 0.01
+		multiply = 0.1
 	}
 	# spread chance for wastelands (wasteland holdings)
 	else_if = {
@@ -106,13 +103,6 @@ lotr_race_dwarf_spread_chance_epidemics_mult_value = {
 			has_holding_type = wastelands_holding
 		}
 		multiply = 0.01
-	}	
-	# spread chance for wastelands (baronies holded by wastelands holder)
-	else_if = {
-		limit = {
-			county.holder = character:k_wastelands_holder
-		}
-		multiply = 0.5
 	}		
 }	
 
