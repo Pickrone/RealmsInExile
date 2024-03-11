@@ -250,6 +250,7 @@
  disease_measles: "measles."
  disease_ergotism: "holy fire."
  disease_dysentery: "bloody flux."
+ disease_beardless_plague: "beardrot."
  missing_illness:0 "#D Missing disease #!"
  health.2201.minor_disease.desc:0 "\n\nNormally, such a minor affliction would not give much cause for concern, yet [sick_character.GetFirstNamePossessive] health is frail and this might be too much for [sick_character.GetHerHim]."
  health.2201.leprosy.desc:1 "\n\nWhile [sick_character.GetSheHe] might live for many years, [sick_character.GetHerHis] deformity will make [sick_character.GetHerHim] shunned and mistrusted. Even I cannot suppress my disgust at the thought of lesions growing all over [sick_character.GetHerHis] skin..."

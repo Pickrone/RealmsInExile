@@ -6602,6 +6602,10 @@ health.2201 = {
 				trigger = { scope:disease_type = flag:black_breath }
 				desc = disease_black_breath
 			}
+			triggered_desc = { #LotR
+				trigger = { scope:disease_type = flag:beardless_plague }
+				desc = disease_beardless_plague
+			}
 			desc = missing_illness
 		}
 		first_valid = {
@@ -6626,6 +6630,7 @@ health.2201 = {
 						scope:disease_type = flag:cancer
 						scope:disease_type = flag:bubonic_plague
 						scope:disease_type = flag:black_breath #LotR
+						scope:disease_type = flag:beardless_plague #LotR
 					}
 				}
 				desc = health.2201.lethal_disease.desc
@@ -6733,6 +6738,10 @@ health.2201 = {
 				limit = { scope:disease_type = flag:black_breath }
 				scope:sick_character = { add_trait_force_tooltip = black_breath }
 			}
+			if = { #LotR
+				limit = { scope:disease_type = flag:beardless_plague }
+				scope:sick_character = { add_trait_force_tooltip = beardless_plague }
+			}			
 		}
 
 		save_court_physician_as_effect = { SCOPE_NAME = physician }
@@ -6949,9 +6958,13 @@ health.2202 = {
 				trigger = { scope:disease_type = flag:bubonic_plague }
 				desc = disease_bubonic_plague
 			}
-			triggered_desc = {
+			triggered_desc = { # lotr
 				trigger = { scope:disease_type = flag:black_breath }
 				desc = disease_black_breath
+			}
+			triggered_desc = { # lotr
+				trigger = { scope:disease_type = flag:beardless_plague }
+				desc = disease_beardless_plague
 			}
 			desc = missing_illness
 		}
@@ -8171,10 +8184,14 @@ health.3101 = {
 				trigger = { scope:disease_type = flag:bubonic_plague }
 				desc = disease_bubonic_plague
 			}
-			triggered_desc = {
+			triggered_desc = { # lotr
 				trigger = { scope:disease_type = flag:black_breath }
 				desc = disease_black_breath
 			}
+			triggered_desc = { # lotr
+				trigger = { scope:disease_type = flag:beardless_plague }
+				desc = disease_beardless_plague
+			}			
 			desc = missing_illness
 		}
 		random_valid = {
@@ -8355,10 +8372,14 @@ health.3102 = {
 				trigger = { scope:disease_type = flag:bubonic_plague }
 				desc = disease_bubonic_plague
 			}
-			triggered_desc = {
+			triggered_desc = {	#lotr
 				trigger = { scope:disease_type = flag:black_breath }
 				desc = disease_black_breath
 			}
+			triggered_desc = {	#lotr
+				trigger = { scope:disease_type = flag:beardless_plague }
+				desc = disease_beardless_plague
+			}			
 			desc = missing_illness
 		}
 		random_valid = {
