@@ -1367,7 +1367,7 @@ beardless_plague = {
 	intrigue = -1
 	learning = -2
 	prowess = -4
-	health = -10
+	health = -9
 
 	category = health
 

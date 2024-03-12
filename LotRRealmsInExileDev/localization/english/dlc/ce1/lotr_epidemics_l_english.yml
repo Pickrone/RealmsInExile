@@ -24,4 +24,4 @@
  trait_beardless_plague_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] lost beard and hair because of illness." 
 
 #Lotr epidemic short description
- disease_desc_short_beardless_plague: "tormented by falling hair"
+ disease_desc_short_beardless_plague: "tormented by falling beard and hair"
