@@ -112,7 +112,7 @@
  health.1011.a:1 "Oh, [ROOT.Char.GetFaith.HealthGodName]! Save me from this nightmare!"
  
  health.1098.t:1 "[SCOPE.Custom('EventTitleDisease')]: The Lost Pride"
- health.1098.desc:0 "Fear of losing my beard has been a constant companion throughout my life. My childhood nurse told me haunting bedtime stories of itching chin and falling hair.\n\nBut the Beardrot is no longer just a scary story. Gingerly, I touch residual remains of once glorious beard. A dark and devastating force is tainting my beard, consuming it as I still breathe."
+ health.1098.desc:0 "Fear of losing my beard has been a constant companion throughout my life. My childhood nurse told me haunting bedtime stories of itching chin, falling hair and bloody blisters across skin.\n\nBut the Beardrot is no longer just a scary story. Gingerly, I touch residual remains of once glorious beard. A dark and devastating force is tainting my beard, consuming it as I still breathe."
  health.1098.court_physician.desc:0 "\n\n"My [ROOT.Char.GetLadyLord], I will do everything in my power, but it might be wise to prepare for the worst...""
  health.1098.a:1 "Oh, [ROOT.Char.GetFaith.HealthGodName]! Save me from this nightmare!"
 
