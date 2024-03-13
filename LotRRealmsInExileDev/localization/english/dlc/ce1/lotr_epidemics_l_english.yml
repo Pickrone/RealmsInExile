@@ -1,14 +1,4 @@
 ﻿l_english:
- epidemic_realm_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetHolder.GetTopLiege.GetPrimaryTitle.GetAdjectiveNoTooltip|U]"
- epidemic_ruler_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetHolder.GetTopLiege.GetFirstNameNoTooltip|U]"
- epidemic_holder_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetHolder.GetFirstNamePossessiveNoTooltip|U]"
- epidemic_ruler_possessive_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetHolder.GetTopLiege.GetFirstNamePossessiveNoTooltip|U]"
- epidemic_titled_ruler_possessive_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetHolder.GetTopLiege.GetTitledFirstNamePossessiveNoTooltip|U]"
- epidemic_province_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetAdjectiveNoTooltip|U]"
- epidemic_culture_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetCulture.GetNameNoTooltip|U]"
- epidemic_devils_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetFaith.DevilNamePossessive|U]"
- epidemic_random_saint_loc: "[ROOT.Epidemic.GetStartingOutbreakProvince.GetCounty.GetTitle.GetHolder.Custom('RandomSaintNamePossessive')|U]"
-
 #Lotr epidemics
  epidemic_beardless_plague: "Beardrot"
  epidemic_realm_beardless_plague: "$epidemic_realm_loc$ Beardrot"
