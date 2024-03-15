@@ -29,7 +29,7 @@ durins_bane_province_modifier_effect = {
                     this = title:c_caradhras_pass
                 }
             }
-            title_province = { add_province_modifier = durins_bane_modifier }
+            # title_province = { add_province_modifier = durins_bane_modifier }
         }
     }
 }
@@ -178,7 +178,7 @@ set_every_county_wilderness = {
 					this = character:nazgul5
 					this = character:nazgul6
 					this = character:nazgul7
-					this = character:nazgul7
+					this = character:nazgul8
 					this = character:nazgul9
 					this = character:lineofsaruman
 					this = character:lineofgandalf

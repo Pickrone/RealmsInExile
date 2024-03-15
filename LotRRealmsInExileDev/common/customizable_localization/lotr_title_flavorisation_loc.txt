@@ -106,15 +106,24 @@ kingdom_dunedain = { # Province vs Principality
 			is_independent_ruler = no
 			OR = { # Add titles that historically have princely stature
 				AND = {
-					any_held_title = { kingdom = title:k_belfalas }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_belfalas 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_dol_amroth }
 				}
 				AND = {
-					any_held_title = { kingdom = title:k_ithilien }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_ithilien 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_ithilien }
 				}
 				AND = {
-					any_held_title = { kingdom = title:k_cardolan }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_cardolan 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_cardolan }
 				}
 			}
@@ -153,15 +162,24 @@ king_dunedain_male = {
 			is_ruler = yes
 			OR = { # Add titles that historically have princely stature
 				AND = {
-					any_held_title = { kingdom = title:k_belfalas }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_belfalas 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_dol_amroth }
 				}
 				AND = {
-					any_held_title = { kingdom = title:k_ithilien }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_ithilien 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_ithilien }
 				}
 				AND = {
-					any_held_title = { kingdom = title:k_cardolan }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_cardolan 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_cardolan }
 				}
 			}
@@ -201,15 +219,24 @@ king_dunedain_female = {
 			is_ruler = yes
 			OR = { # Add titles that historically have princely stature
 				AND = {
-					any_held_title = { kingdom = title:k_belfalas }
+					any_held_title = {
+						tier = tier_kingdom
+						kingdom = title:k_belfalas 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_dol_amroth }
 				}
 				AND = {
-					any_held_title = { kingdom = title:k_ithilien }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_ithilien 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_ithilien }
 				}
 				AND = {
-					any_held_title = { kingdom = title:k_cardolan }
+					any_held_title = { 
+						tier = tier_kingdom
+						kingdom = title:k_cardolan 
+					}
 					dynasty = { has_dynasty_modifier = princely_house_of_cardolan }
 				}
 			}
@@ -238,6 +265,267 @@ king_dunedain_female = {
 	text = { # Independent Dúnedain Women of Kingly rank are localized as Queens
 		fallback = yes
         localization_key = king_female
+    }
+}
+
+### Dragon Knights ###
+kingdom_dragon_knights = { # Province vs Principality
+	type = character 
+	
+	text = { # For select vassal houses given the honor, localize as Principalities
+		trigger = {
+			any_held_title = { 
+				tier = tier_kingdom
+				kingdom = title:k_dragon_knights 
+			}
+			has_dynasty = yes
+			is_independent_ruler = no
+			# OR = { # Add titles that historically have princely stature
+			# 	AND = {
+			# 		any_held_title = { kingdom = title:k_dragon_knights }
+			# 		#dynasty = { has_dynasty_modifier = princely_house_of_dol_amroth }
+			# 	}
+			# 	AND = {
+			# 		any_held_title = { kingdom = title:k_ithilien }
+			# 		#dynasty = { has_dynasty_modifier = princely_house_of_ithilien }
+			# 	}
+			# 	AND = {
+			# 		any_held_title = { kingdom = title:k_cardolan }
+			# 		#dynasty = { has_dynasty_modifier = princely_house_of_cardolan }
+			# 	}
+			# }
+		}
+		localization_key = dunedain_princality
+	}
+	text = { # Other vassal kingdoms are localized as 'Provinces'
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = no
+					culture = { has_cultural_pillar = heritage_dunedain }
+				}
+				
+				AND = { # Kingdoms held by imperial tier Dunedain are also localized as 'Province'
+					is_independent_ruler = yes
+					highest_held_title_tier = tier_empire
+				}
+			}
+		}
+        localization_key = dunedain_province
+    }
+	text = { # Independent Dúnedain kingdom-tier titles are localized as Kingdoms
+		fallback = yes
+        localization_key = kingdom
+    }
+}
+
+easterling_count = {
+	type = character 
+	
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			has_dynasty = yes
+			is_independent_ruler = no
+			is_ruler = yes
+			liege = {
+				any_held_title = { 
+					tier = tier_kingdom
+					kingdom = title:k_dragon_knights 
+				}
+			}
+		}
+		localization_key = count_vassal_dragon_knights_male
+	}
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			has_dynasty = yes
+			is_independent_ruler = no
+			is_ruler = yes
+			liege.liege = {
+				any_held_title = { 
+					tier = tier_kingdom
+					kingdom = title:k_dragon_knights 
+				}
+			}
+		}
+		localization_key = count_vassal_dragon_knights_male
+	}
+	text = { # Other vassal kings are localized as 'High Lord'
+		trigger = {
+			is_independent_ruler = no
+			is_ruler = yes
+			#culture = { has_cultural_pillar = heritage_dunedain }
+		}
+        localization_key = count_igath
+    }
+	 text = { # Spouses of High Ladies localized as Lord
+	 	trigger = {
+	 		is_independent_ruler = no
+			is_ruler = no
+	 		any_spouse = { is_independent_ruler = no }
+	 		#primary_spouse.culture = { has_cultural_pillar = heritage_dunedain }
+	 	}
+         localization_key = count_igath
+     }
+	text = { # Independent Dúnedain of Kingly rank are localized as Kings
+		fallback = yes
+        localization_key = count_igath
+    }
+}
+
+easterling_duke = {
+	type = character 
+	
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			has_dynasty = yes
+			is_independent_ruler = no
+			is_ruler = yes
+			liege = {
+				any_held_title = { kingdom = title:k_dragon_knights }
+			}
+		}
+		localization_key = duke_vassal_dragon_knights_male
+	}
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			has_dynasty = yes
+			is_independent_ruler = no
+			is_ruler = yes
+			liege.liege = {
+				any_held_title = { kingdom = title:k_dragon_knights }
+			}
+		}
+		localization_key = duke_vassal_dragon_knights_male
+	}
+	text = { # Other vassal kings are localized as 'High Lord'
+		trigger = {
+			is_independent_ruler = no
+			is_ruler = yes
+			#culture = { has_cultural_pillar = heritage_dunedain }
+		}
+        localization_key = duke_igath
+    }
+	 text = { # Spouses of High Ladies localized as Lord
+	 	trigger = {
+	 		is_independent_ruler = no
+			is_ruler = no
+	 		any_spouse = { is_independent_ruler = no }
+	 		#primary_spouse.culture = { has_cultural_pillar = heritage_dunedain }
+	 	}
+         localization_key = duke_igath
+     }
+	text = { # Independent Dúnedain of Kingly rank are localized as Kings
+		fallback = yes
+        localization_key = duke_igath
+    }
+}
+
+easterling_county = {
+	type = character 
+	
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			#has_dynasty = yes
+			#is_independent_ruler = no
+			#is_ruler = yes
+			liege = {
+				any_held_title = { 
+					tier = tier_kingdom
+					kingdom = title:k_dragon_knights 
+				}
+			}
+		}
+		localization_key = county_vassal_dragon_knights
+	}
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			#has_dynasty = yes
+			#is_independent_ruler = no
+			#is_ruler = yes
+			liege.liege = {
+				any_held_title = { 
+					tier = tier_kingdom
+					kingdom = title:k_dragon_knights 
+				}
+			}
+		}
+		localization_key = county_vassal_dragon_knights
+	}
+	text = { # Other vassal kings are localized as 'High Lord'
+		trigger = {
+			is_independent_ruler = no
+			#is_ruler = yes
+			#culture = { has_cultural_pillar = heritage_dunedain }
+		}
+        localization_key = county_igath
+    }
+	 text = { # Spouses of High Ladies localized as Lord
+	 	trigger = {
+	 		is_independent_ruler = no
+			#is_ruler = no
+	 		any_spouse = { is_independent_ruler = no }
+	 		#primary_spouse.culture = { has_cultural_pillar = heritage_dunedain }
+	 	}
+         localization_key = county_igath
+     }
+	text = { # Independent Dúnedain of Kingly rank are localized as Kings
+		fallback = yes
+        localization_key = county_igath
+    }
+}
+
+easterling_duchy = {
+	type = character 
+	
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			#has_dynasty = yes
+			#is_independent_ruler = no
+			#is_ruler = yes
+			liege = {
+				any_held_title = { 
+					tier = tier_kingdom
+					kingdom = title:k_dragon_knights 
+				}
+			}
+		}
+		localization_key = duchy_vassal_dragon_knights
+	}
+	text = { # For select vassal houses given the honor, localize as Princes
+		trigger = {
+			#has_dynasty = yes
+			#is_independent_ruler = no
+			#is_ruler = yes
+			liege.liege = {
+				any_held_title = { 
+					tier = tier_kingdom
+					kingdom = title:k_dragon_knights 
+				}
+			}
+		}
+		localization_key = duchy_vassal_dragon_knights
+	}
+	text = { # Other vassal kings are localized as 'High Lord'
+		trigger = {
+			is_independent_ruler = no
+			#is_ruler = yes
+			#culture = { has_cultural_pillar = heritage_dunedain }
+		}
+        localization_key = duchy_igath
+    }
+	 text = { # Spouses of High Ladies localized as Lord
+	 	trigger = {
+	 		is_independent_ruler = no
+			#is_ruler = no
+	 		any_spouse = { is_independent_ruler = no }
+	 		#primary_spouse.culture = { has_cultural_pillar = heritage_dunedain }
+	 	}
+         localization_key = duchy_igath
+     }
+	text = { # Independent Dúnedain of Kingly rank are localized as Kings
+		fallback = yes
+        localization_key = duchy_igath
     }
 }
 
@@ -390,7 +678,10 @@ county_male_dorwinion = {
 
 	text = {
 		trigger = {
-			any_held_title = { kingdom = title:k_dorwinion }
+			any_held_title = { 
+				tier = tier_kingdom
+				kingdom = title:k_dorwinion 
+			}
 			has_dynasty = yes
 			dynasty = { has_dynasty_modifier = winelords }
 		}
@@ -398,7 +689,10 @@ county_male_dorwinion = {
 	}
 	text = {
 		trigger = {
-			any_held_title = { kingdom = title:k_dorwinion }
+			any_held_title = { 
+				tier = tier_kingdom
+				kingdom = title:k_dorwinion 
+			}
 			has_dynasty = yes
 			dynasty = { has_dynasty_modifier = master_merchants }
 		}
